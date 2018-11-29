@@ -5,7 +5,7 @@
 #include "Vehicle.h"
 #include "MultiVehicleManager.h"
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 class JoystickSDL : public Joystick
 {

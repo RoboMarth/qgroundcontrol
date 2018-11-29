@@ -149,7 +149,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options(
 		-Wall
 		-Wextra
-		-Werror
+		#	-Werror
 	)
 	
 elseif (WIN32)

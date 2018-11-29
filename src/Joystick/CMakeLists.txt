@@ -27,8 +27,8 @@ target_include_directories(Joystick PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 if(LINUX)
         find_package(SDL2 REQUIRED)
 	include_directories(${SDL2_INCLUDE_DIRS})
-	string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES) # work around for cmake warning
-	target_link_libraries(Joystick PRIVATE ${SDL2_LIBRARIES})
+	#	string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES) # work around for cmake warning
+	target_link_libraries(Joystick PRIVATE /usr/lib/libSDL2.so)
 elseif(APPLE)
         include_directories(${CMAKE_SOURCE_DIR}/libs/lib/Frameworks/SDL2.framework/Headers)
         target_link_libraries(Joystick PRIVATE -F${CMAKE_SOURCE_DIR}/libs/lib/Frameworks "-framework SDL2")
